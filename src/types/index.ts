@@ -18,7 +18,7 @@ export type VerificationStatus =
   | 'VERIFIED_ON_LEDGER';
 
 export interface HederaProof {
-  topicId: string;                // e.g. '0.0.592811'
+  topicId: string;                // e.g. '0.0.10581166'
   sequenceNumber: number;         // e.g. 14208
   consensusTimestamp: string;     // e.g. '1718920145.289190123'
   formattedTimestamp: string;     // ISO or human format

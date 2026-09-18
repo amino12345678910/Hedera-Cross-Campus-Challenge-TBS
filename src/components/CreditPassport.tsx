@@ -169,7 +169,7 @@ export const CreditPassport: React.FC<CreditPassportProps> = ({
             <div className="mt-1 text-sm font-bold text-emerald-700">
               {profile.completedObligations}
             </div>
-            <div className="text-[10px] text-slate-400 mt-0.5">100% satisfied</div>
+            <div className="text-[10px] text-slate-400 mt-0.5">11 / 12 settled</div>
           </div>
 
           <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80">

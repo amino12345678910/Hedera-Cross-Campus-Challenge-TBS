@@ -112,7 +112,7 @@ export const CredentialModal: React.FC<CredentialModalProps> = ({
               <div className="flex items-center space-x-2">
                 <h3 className="text-base font-bold text-slate-900 tracking-tight">TrustLine Verifiable Credential</h3>
                 <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
-                  W3C Spirit
+                  Portable Credential
                 </span>
               </div>
               <p className="text-xs text-slate-500 mt-0.5">
@@ -177,7 +177,7 @@ export const CredentialModal: React.FC<CredentialModalProps> = ({
                   <span className="text-slate-900 font-bold">{credential.holder}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-500 font-medium">Holder DID:</span>
+                  <span className="text-slate-500 font-medium">Holder Identifier:</span>
                   <span className="text-slate-600 truncate max-w-[200px]" title={credential.holderDid}>
                     {credential.holderDid}
                   </span>

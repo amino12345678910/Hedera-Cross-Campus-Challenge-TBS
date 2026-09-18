@@ -128,7 +128,7 @@ export const ReliabilityProof: React.FC<ReliabilityProofProps> = ({
             <span className="text-xs text-slate-500 font-mono font-medium">(3 sources)</span>
           </div>
           <p className="text-[11px] text-slate-600 mt-2 leading-relaxed">
-            Multi-client freelance retainers providing 2.9x debt service buffer.
+            Multi-client freelance retainers averaging 2,250 TND / month.
           </p>
         </div>
 

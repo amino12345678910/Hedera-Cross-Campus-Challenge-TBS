@@ -197,7 +197,7 @@ export function App() {
 
       const repaymentRecord = {
         installmentNumber: nextInstallment,
-        amountTND: loan.monthlyRepayment || 337,
+        amountTND: loan.monthlyRepayment || 333,
         amountHbar: loan.installmentAmountHbar || 1.67,
         txHash: res.transactionId,
         date: new Date().toISOString().split('T')[0],
@@ -224,7 +224,7 @@ export function App() {
         id: `evt-${newEventNum < 10 ? '0' : ''}${newEventNum}`,
         title: `TrustLine Loan Installment #${nextInstallment}`,
         category: 'MICRO_LOAN',
-        amount: 337,
+        amount: 333,
         currency: 'TND',
         date: new Date().toISOString().split('T')[0],
         isObligation: true,

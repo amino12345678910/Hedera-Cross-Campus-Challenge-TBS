@@ -27,7 +27,7 @@ export class AIExplainerService {
     const citations = [
       {
         title: `${events.length} Verifiable Ledger Events`,
-        details: `Audited 14 consecutive events anchored to Hedera Consensus Service Topic 0.0.592811 spanning Education, Utility, Housing, and Micro-credit.`,
+        details: `Audited 14 consecutive events anchored to Hedera Consensus Service Topic 0.0.10581166 spanning Education, Utility, Housing, and Micro-credit.`,
         type: 'positive' as const
       },
       {

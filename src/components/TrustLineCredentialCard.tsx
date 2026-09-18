@@ -46,7 +46,7 @@ export const TrustLineCredentialCard: React.FC<TrustLineCredentialCardProps> = (
             <div className="flex items-center space-x-2">
               <h3 className="text-lg font-bold text-slate-900 tracking-tight">TrustLine Credential</h3>
               <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wide">
-                W3C Spirit
+                Portable Credential
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
@@ -70,7 +70,7 @@ export const TrustLineCredentialCard: React.FC<TrustLineCredentialCardProps> = (
         <div className="space-y-3.5 p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-xs">
           <div>
             <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-              Holder
+              Holder Identifier
             </span>
             <div className="text-sm font-bold text-slate-900 mt-0.5">{credential.holder}</div>
             <div className="text-[11px] font-mono text-slate-500 truncate">{credential.holderDid}</div>

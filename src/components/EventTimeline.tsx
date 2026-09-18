@@ -36,19 +36,19 @@ export const EventTimeline: React.FC<EventTimelineProps> = ({
   const getCategoryIcon = (category: EventCategory) => {
     switch (category) {
       case 'EDUCATION':
-        return <GraduationCap className="w-4 h-4 text-purple-400" />;
+        return <GraduationCap className="w-4 h-4 text-purple-600" />;
       case 'INCOME':
-        return <Briefcase className="w-4 h-4 text-emerald-400" />;
+        return <Briefcase className="w-4 h-4 text-emerald-600" />;
       case 'UTILITY':
-        return <Smartphone className="w-4 h-4 text-cyan-400" />;
+        return <Smartphone className="w-4 h-4 text-cyan-600" />;
       case 'MICRO_LOAN':
-        return <Landmark className="w-4 h-4 text-blue-400" />;
+        return <Landmark className="w-4 h-4 text-blue-600" />;
       case 'HOUSING':
-        return <Home className="w-4 h-4 text-amber-400" />;
+        return <Home className="w-4 h-4 text-amber-600" />;
       case 'MEMBERSHIP':
-        return <Zap className="w-4 h-4 text-slate-300" />;
+        return <Zap className="w-4 h-4 text-slate-600" />;
       default:
-        return <Landmark className="w-4 h-4 text-slate-400" />;
+        return <Landmark className="w-4 h-4 text-slate-500" />;
     }
   };
 
@@ -56,35 +56,35 @@ export const EventTimeline: React.FC<EventTimelineProps> = ({
     switch (event.status) {
       case 'PAID_ON_TIME':
         return (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-            <CheckCircle2 className="w-3 h-3 mr-1" />
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <CheckCircle2 className="w-3 h-3 mr-1 text-emerald-600" />
             Paid on time
           </span>
         );
       case 'COMPLETED':
         return (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
-            <CheckCircle2 className="w-3 h-3 mr-1" />
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-50 text-blue-700 border border-blue-200">
+            <CheckCircle2 className="w-3 h-3 mr-1 text-blue-600" />
             Completed
           </span>
         );
       case 'VERIFIED':
         return (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700/60">
-            <ShieldCheck className="w-3 h-3 mr-1" />
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200">
+            <ShieldCheck className="w-3 h-3 mr-1 text-slate-600" />
             Verified
           </span>
         );
       case 'PAID_LATE':
         return (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">
-            <AlertCircle className="w-3 h-3 mr-1" />
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200">
+            <AlertCircle className="w-3 h-3 mr-1 text-amber-600" />
             {event.daysLate} days late (cured)
           </span>
         );
       case 'DEFAULTED':
         return (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20">
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-rose-50 text-rose-700 border border-rose-200">
             Defaulted
           </span>
         );

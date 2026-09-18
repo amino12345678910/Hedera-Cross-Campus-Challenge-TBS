@@ -1,6 +1,6 @@
 import { FinancialEvent, UserProfile } from '../types';
 
-export const HEDERA_TOPIC_ID = '0.0.592811';
+export const HEDERA_TOPIC_ID = '0.0.10581166';
 export const TRUSTLINE_NODE_ID = '0.0.482910';
 
 export const initialProfile: UserProfile = {
@@ -65,7 +65,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '4a9f3b7d8e2c1109a8b7e6f5d4c3b2a10987654321fedcba0987654321abcdef',
       messageHash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -88,7 +88,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d',
       messageHash: 'b5a2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -112,7 +112,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b',
       messageHash: 'f4c3b2a10987654321fedcba0987654321abcdef4a9f3b7d8e2c1109a8b7e6f5',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -136,7 +136,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8d',
       messageHash: '90123456789abcdef0123456789abcdef0123456789abcdef0b5a2c3d4e5f678',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -160,7 +160,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c',
       messageHash: 'c4ca4238a0b923820dcc509a6f75849b280386c919a6d4e5b8d3a1f28b49e0c1',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -184,7 +184,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f',
       messageHash: 'a8b7e6f5d4c3b2a10987654321fedcba0987654321abcdef4a9f3b7d8e2c1109',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -208,7 +208,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c',
       messageHash: 'fedcba0987654321abcdef4a9f3b7d8e2c1109a8b7e6f5d4c3b2a10987654321',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -231,7 +231,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b',
       messageHash: '6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -256,7 +256,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: 'd1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2',
       messageHash: '5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -280,7 +280,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a',
       messageHash: '1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -303,7 +303,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b',
       messageHash: 'f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -327,7 +327,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c',
       messageHash: '2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -351,7 +351,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: '6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e',
       messageHash: 'b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   },
   {
@@ -375,7 +375,7 @@ export const initialEvents: FinancialEvent[] = [
       runningHash: 'e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1',
       messageHash: '9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b',
       submitterAccountId: TRUSTLINE_NODE_ID,
-      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.592811'
+      explorerUrl: 'https://hashscan.io/testnet/topic/0.0.10581166'
     }
   }
 ];

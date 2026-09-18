@@ -40,9 +40,9 @@ export interface HederaContractExecutionResult {
  * - When credentials absent: operates in transparent DEMO MODE with zero disruption.
  */
 export class HederaService {
-  public static readonly DEFAULT_TOPIC_ID = '0.0.592811';
+  public static readonly DEFAULT_TOPIC_ID = '0.0.10581166';
   public static readonly ORACLE_ACCOUNT_ID = '0.0.482910';
-  public static readonly SMART_CONTRACT_ID = '0.0.912440';
+  public static readonly SMART_CONTRACT_ID = '0.0.10581184';
   public static readonly HTS_STABLECOIN_TOKEN_ID = '0.0.884210'; // e-TND Testnet Token
 
   private static cachedStatus: HederaNetworkStatus | null = null;

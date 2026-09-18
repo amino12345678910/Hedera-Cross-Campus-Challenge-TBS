@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   networkStatus
 }) => {
   const isLive = networkStatus?.isLive ?? false;
-  const topicId = networkStatus?.topicId || '0.0.592811';
+  const topicId = networkStatus?.topicId || '0.0.10581166';
   const hasContract = Boolean(networkStatus?.contractId);
   const isTwoParty = Boolean(networkStatus?.isTwoPartyMode ?? (networkStatus?.isDemoAccountMode === false));
 

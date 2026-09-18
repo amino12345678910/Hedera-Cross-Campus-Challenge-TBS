@@ -56,8 +56,8 @@ export class CredentialService {
     const credentialHash = CredentialHashService.computeSha256Sync(canonicalPayloadString);
 
     const credentialId = `cred_tl_2026_${profile.id}`;
-    const issuedAt = new Date('2026-03-15T12:00:00Z').toISOString();
-    const expiresAt = new Date('2027-03-15T12:00:00Z').toISOString();
+    const issuedAt = new Date('2026-09-15T12:00:00Z').toISOString();
+    const expiresAt = new Date('2027-09-15T12:00:00Z').toISOString();
 
     const credential: TrustLineCredential = {
       id: credentialId,
@@ -249,7 +249,7 @@ export class CredentialService {
     const isValid = structureValid && hashMatches && hederaAnchorFound && consensusTimestampVerified;
 
     const details: string[] = [];
-    if (structureValid) details.push(`Credential schema v${credential.version || '1.0'} conforms to W3C Verifiable Credential standard`);
+    if (structureValid) details.push(`Credential schema v${credential.version || '1.0'} conforms to portable verifiable credential standard`);
     if (hashMatches) details.push(`Cryptographic SHA-256 hash matches canonical claims (${computedHash.slice(0, 10)}...)`);
     else details.push(`HASH MISMATCH: Computed ${computedHash.slice(0, 12)}... ≠ Anchored ${targetAnchoredHash.slice(0, 12)}...`);
     if (hederaAnchorFound) details.push(`Hedera Consensus Service anchor found on Topic ${credential.hederaAnchor.topicId} (Seq #${credential.hederaAnchor.sequenceNumber})`);

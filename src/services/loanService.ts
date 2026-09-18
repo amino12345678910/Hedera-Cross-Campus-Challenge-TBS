@@ -9,7 +9,7 @@ export const defaultLoanRequest: LoanApplication = {
   purpose: 'Laptop for freelance work',
   termDays: 90,
   interestRateAnnual: 4.5,
-  monthlyRepayment: 337,
+  monthlyRepayment: 333,
   collateral: 'None',
   status: 'DRAFT',
   principalHbar: 5,

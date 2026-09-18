@@ -94,7 +94,7 @@ export const ApprovalSuccessModal: React.FC<ApprovalSuccessModalProps> = ({
 
             <div className="flex items-center justify-between text-slate-600">
               <span>Borrower Account:</span>
-              <span className="text-slate-900 font-medium">0.0.781944 (Ahmed Ben Ali)</span>
+              <span className="text-slate-900 font-medium">{networkStatus?.borrowerIdMasked || '0.0.10581166'} ({loan.borrowerName || 'Ahmed Ben Ali'})</span>
             </div>
 
             <div className="flex items-center justify-between text-slate-600">
@@ -115,7 +115,7 @@ export const ApprovalSuccessModal: React.FC<ApprovalSuccessModalProps> = ({
             <Sparkles className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
             <div className="text-emerald-950 leading-relaxed">
               <span className="font-bold text-emerald-900">Reputation Loop Activated:</span>{' '}
-              As Ahmed repays the 3 monthly installments (~337 TND/mo), each settlement is anchored to Hedera HCS to increase his borrowing capacity for future tranches.
+              As Ahmed repays the 3 monthly installments (~333 TND/mo), each settlement is anchored to Hedera HCS to increase his borrowing capacity for future tranches.
             </div>
           </div>
 

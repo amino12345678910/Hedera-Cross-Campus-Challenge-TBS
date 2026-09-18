@@ -117,7 +117,7 @@ export const LoanRequestModal: React.FC<LoanRequestModalProps> = ({
               <div className="p-4 rounded-xl bg-blue-50/80 border border-blue-200 text-xs text-blue-950 flex items-start space-x-3">
                 <Info className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
                 <p className="leading-relaxed">
-                  TrustLine enables zero-collateral financing for students and freelancers by letting institutional micro-lenders audit cryptographic evidence directly rather than relying on conventional credit score agencies.
+                  TrustLine enables evidence-backed financing for students and freelancers by letting institutional micro-lenders audit cryptographic proofs directly rather than relying on conventional credit bureau history.
                 </p>
               </div>
 
@@ -138,7 +138,7 @@ export const LoanRequestModal: React.FC<LoanRequestModalProps> = ({
                   </div>
                 </div>
                 <div className="flex justify-between text-[11px] text-slate-500 px-1">
-                  <span>Standard micro-credit tranche: 500 – 2,000 TND</span>
+                  <span>Prototype financing request: 500 – 2,000 TND</span>
                   <span className="text-emerald-700 font-semibold">Demo preset: 1,000 TND</span>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export const LoanRequestModal: React.FC<LoanRequestModalProps> = ({
                   Interpreting Observable Evidence...
                 </h4>
                 <p className="text-xs text-slate-500">
-                  {analyzingStep === 1 && "Connecting to Hedera Topic 0.0.592811..."}
+                  {analyzingStep === 1 && `Connecting to Hedera Topic ${events[0]?.proof.topicId || '0.0.10581166'}...`}
                   {analyzingStep === 2 && "Checking 12 repayment obligations against default policy..."}
                   {analyzingStep >= 3 && "Verifying cashflow coverage across 3 income sources..."}
                 </p>

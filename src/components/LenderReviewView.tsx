@@ -53,7 +53,7 @@ export const LenderReviewView: React.FC<LenderReviewViewProps> = ({
   const [isApproving, setIsApproving] = useState(false);
 
   const isLive = networkStatus?.isLive ?? false;
-  const contractId = networkStatus?.contractId || loan.contractId || '0.0.681944';
+  const contractId = networkStatus?.contractId || loan.contractId || '0.0.10581184';
   const topicId = networkStatus?.topicId || HederaService.DEFAULT_TOPIC_ID;
   const isApproved = loan.status === 'APPROVED' || loan.status === 'ACTIVE' || loan.status === 'REPAID';
 
@@ -221,10 +221,10 @@ export const LenderReviewView: React.FC<LenderReviewViewProps> = ({
         <div className="mt-6 p-5 rounded-2xl bg-purple-50/70 border border-purple-200">
           <div className="flex items-center space-x-2 text-xs font-bold text-purple-900 mb-2">
             <Cpu className="w-4 h-4 text-purple-700" />
-            <span>Automated Evidence Policy Assessment</span>
+            <span>AI Evidence Copilot — Policy Assessment</span>
           </div>
           <p className="text-xs sm:text-sm text-purple-950 leading-relaxed font-normal">
-            &ldquo;TrustLine found 14 verified financial events. 11 repayment obligations were completed. 10 were completed on time. No defaults were detected. The requested repayment burden (~337 TND/mo) is supported by ~2,250 TND/mo verified freelance inflows and falls within the prototype&apos;s policy limits.&rdquo;
+            &ldquo;TrustLine found 14 verified financial events. 11 repayment obligations were completed. 10 were completed on time. No defaults were detected. The requested repayment burden (~333 TND/mo) is supported by ~2,250 TND/mo verified freelance inflows and falls within the prototype&apos;s policy limits.&rdquo;
           </p>
         </div>
 

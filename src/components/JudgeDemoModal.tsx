@@ -51,7 +51,7 @@ const STEPS: DemoStep[] = [
   {
     step: 3,
     phase: 'Portable Credential',
-    cue: 'Portable proof of financial reliability (W3C spirit).',
+    cue: 'Portable proof of financial reliability (VC format).',
     detail: 'Canonical claims hashed with deterministic SHA-256 and anchored to HCS Topic.',
     actionLabel: 'Open Credential Dossier & QR',
     actionType: 'OPEN_CREDENTIAL'

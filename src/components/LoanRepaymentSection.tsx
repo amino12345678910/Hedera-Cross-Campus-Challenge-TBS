@@ -113,7 +113,7 @@ export const LoanRepaymentSection: React.FC<LoanRepaymentSectionProps> = ({
         <div className="p-3.5 rounded-xl bg-slate-50/80 border border-slate-200/80">
           <div className="text-[11px] font-medium text-slate-500">Next Installment</div>
           <div className="text-base font-bold text-slate-900 font-mono mt-0.5">
-            {isRepaid ? '0 TND' : '337 TND'}
+            {isRepaid ? '0 TND' : '~333 TND'}
           </div>
           <div className="text-[10px] text-slate-500 font-mono">
             {isRepaid ? 'Fully Settled' : `~${loan.installmentAmountHbar} Testnet HBAR`}

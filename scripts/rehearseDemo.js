@@ -126,7 +126,7 @@ const claimsV2 = {
     lateObligations: 1,
     defaults: 0,
     verifiedIncomeSources: 3,
-    totalObligationsRepaidTND: 3497,
+    totalObligationsRepaidTND: 3493,
     verifiedInflowsTND: 2900,
     reliabilityIndicator: 90,
     reliabilityIndicatorLabel: 'High Observable Reliability (Active Loan Repayments)'

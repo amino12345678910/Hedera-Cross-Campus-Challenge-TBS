@@ -47,12 +47,12 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
-            Verifiable credit for the unbanked economy.
+            Financial behavior you can prove.
           </h1>
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
-            TrustLine transforms verified everyday financial events—tuition, freelance retainers, and utility settlements—into a tamper-evident, portable credit passport anchored to Hedera.
+            TrustLine turns verified financial activity into a portable, independently verifiable credential for people with limited conventional credit history.
           </p>
 
           {/* Action CTAs */}
@@ -78,7 +78,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-slate-500 font-medium">
             <span className="flex items-center space-x-1.5 text-slate-700">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Zero Collateral Required</span>
+              <span>Evidence-Based Financing</span>
             </span>
             <span className="text-slate-300">•</span>
             <span className="flex items-center space-x-1.5 text-slate-700">
@@ -106,7 +106,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900">Verifiable Passport Dossier</h3>
-                  <p className="text-[11px] text-slate-500">Subject: Ahmed Ben Ali (0.0.781944)</p>
+                  <p className="text-[11px] text-slate-500">Subject: Ahmed Ben Ali</p>
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
               </div>
               <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80">
                 <span className="text-[10px] text-slate-500 uppercase font-medium">On-Time Rate</span>
-                <p className="text-lg font-bold text-emerald-600 mt-0.5">100%</p>
+                <p className="text-lg font-bold text-emerald-600 mt-0.5">90.9%</p>
               </div>
               <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80">
                 <span className="text-[10px] text-slate-500 uppercase font-medium">Defaults</span>
@@ -181,7 +181,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-600 mt-1">
-              Follow Ahmed Ben Ali&apos;s complete lifecycle: from unbanked student to funded borrower with on-chain reputation update.
+              Follow Ahmed Ben Ali&apos;s complete lifecycle: from a student with limited credit history to funded borrower with on-chain reputation update.
             </p>
           </div>
 
@@ -233,7 +233,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
               <span className="font-mono text-slate-400 group-hover:text-emerald-600 font-bold">03</span>
               <span className="text-[10px] text-slate-700 font-bold bg-slate-200/80 px-2 py-0.5 rounded">Deterministic</span>
             </div>
-            <p className="text-xs font-bold text-slate-900">AI Evidence Explainer</p>
+            <p className="text-xs font-bold text-slate-900">AI Evidence Copilot</p>
             <p className="text-[11px] text-slate-600 mt-1 leading-relaxed">
               Explains policy adherence citing exact timeline evidence.
             </p>
@@ -283,7 +283,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center mb-3.5 text-purple-600">
             <Cpu className="w-5 h-5" />
           </div>
-          <h4 className="text-sm font-bold text-slate-900">Observable AI Reasoning</h4>
+          <h4 className="text-sm font-bold text-slate-900">AI Evidence Copilot</h4>
           <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
             AI cites observable evidence against transparent policies—never a black-box scoring algorithm.
           </p>
