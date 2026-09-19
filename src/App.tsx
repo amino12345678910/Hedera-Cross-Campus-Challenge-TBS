@@ -519,6 +519,7 @@ export function App() {
         {/* VIEW 1: LANDING HERO */}
         {currentTab === 'landing' && (
           <LandingHero
+            networkStatus={networkStatus}
             onExplorePassport={() => setCurrentTab('passport')}
             onOpenLenderView={() => setCurrentTab('lender')}
             onOpenVerifyModal={() => handleOpenVerifyModal()}
@@ -640,6 +641,7 @@ export function App() {
         onNavigateTab={(tab) => setCurrentTab(tab)}
         onOpenCredentialModal={() => setIsCredentialModalOpen(true)}
         onOpenLoanModal={() => setIsLoanModalOpen(true)}
+        networkStatus={networkStatus}
       />
 
       {/* Modern Hackathon Footer */}

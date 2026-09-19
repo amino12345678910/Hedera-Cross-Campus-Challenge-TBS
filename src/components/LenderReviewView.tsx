@@ -96,7 +96,7 @@ export const LenderReviewView: React.FC<LenderReviewViewProps> = ({
                 : 'bg-amber-50 border-amber-200 text-amber-800'
             }`}>
               <span className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-emerald-600 animate-pulse' : 'bg-amber-500'}`} />
-              <span>Network: {isLive ? 'LIVE TESTNET' : 'DEMO MODE'}</span>
+              <span>{isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK'}</span>
             </div>
 
             <button
@@ -252,7 +252,7 @@ export const LenderReviewView: React.FC<LenderReviewViewProps> = ({
               ) : (
                 <>
                   <Lock className="w-4 h-4" />
-                  <span>{isLive ? 'Approve on Hedera Testnet' : 'Approve Loan (Demo Mode)'}</span>
+                  <span>{isLive ? 'Approve on Hedera Testnet' : 'Approve Loan (Simulated Fallback)'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </>
               )}

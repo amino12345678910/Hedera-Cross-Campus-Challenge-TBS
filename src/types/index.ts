@@ -32,6 +32,8 @@ export interface HederaProof {
 
 export interface HederaNetworkStatus {
   isLive: boolean;
+  mode?: 'LIVE' | 'SIMULATED';
+  statusLabel?: 'LIVE • HEDERA TESTNET' | 'SIMULATED • DEMO FALLBACK' | string;
   isTwoPartyMode?: boolean;
   isDemoAccountMode?: boolean;
   lenderIdMasked?: string;
@@ -43,6 +45,10 @@ export interface HederaNetworkStatus {
   contractLive?: boolean;
   network: 'testnet';
   reason?: string;
+  hasValidCredentials?: boolean;
+  clientInitialized?: boolean;
+  topicReachable?: boolean;
+  contractConfigured?: boolean;
 }
 
 export interface FinancialEvent {

@@ -16,18 +16,24 @@ import {
   Activity
 } from 'lucide-react';
 import { HEDERA_TOPIC_ID } from '../services/mockData';
+import { HederaNetworkStatus } from '../types';
 
 interface LandingHeroProps {
   onExplorePassport: () => void;
   onOpenLenderView: () => void;
   onOpenVerifyModal: () => void;
+  networkStatus?: HederaNetworkStatus;
 }
 
 export const LandingHero: React.FC<LandingHeroProps> = ({
   onExplorePassport,
   onOpenLenderView,
-  onOpenVerifyModal
+  onOpenVerifyModal,
+  networkStatus
 }) => {
+  const isLive = networkStatus?.isLive ?? true;
+  const topicId = networkStatus?.topicId || HEDERA_TOPIC_ID;
+
   return (
     <div className="relative overflow-hidden pt-4 pb-12 lg:pt-8 lg:pb-16 space-y-16">
       
@@ -39,10 +45,12 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           
           {/* Micro Pill Badge */}
           <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-xs text-emerald-900 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+            <span className={`w-2 h-2 rounded-full ${isLive ? 'bg-emerald-600 animate-pulse' : 'bg-amber-500'}`} />
             <span className="font-semibold text-emerald-950">TrustLine Protocol</span>
             <span className="text-emerald-300">/</span>
-            <span className="text-emerald-800 font-mono text-[11px] font-medium">Hedera Testnet</span>
+            <span className="text-emerald-800 font-mono text-[11px] font-bold">
+              {isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK'}
+            </span>
           </div>
 
           {/* Headline */}
@@ -135,14 +143,14 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs font-mono">
               <div className="flex items-center justify-between text-[11px]">
                 <span className="text-slate-600 font-sans font-semibold">Hedera Consensus Anchor</span>
-                <span className="text-emerald-700 font-semibold flex items-center space-x-1">
+                <span className={`font-semibold flex items-center space-x-1 ${isLive ? 'text-emerald-700' : 'text-amber-700'}`}>
                   <Activity className="w-3 h-3 text-emerald-600" />
-                  <span>CONSENSUS VERIFIED</span>
+                  <span>{isLive ? 'LIVE TESTNET ANCHOR' : 'SIMULATED ANCHOR'}</span>
                 </span>
               </div>
               <div className="text-[11px] text-slate-600 flex justify-between">
                 <span>Topic ID:</span>
-                <span className="text-slate-900 font-semibold">{HEDERA_TOPIC_ID}</span>
+                <span className="text-slate-900 font-semibold">{topicId}</span>
               </div>
               <div className="text-[11px] text-slate-600 flex justify-between">
                 <span>Canonical Hash:</span>

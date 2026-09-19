@@ -163,7 +163,7 @@ export const TrustLineCredentialCard: React.FC<TrustLineCredentialCardProps> = (
               </span>
             </div>
             <span className="text-[11px] font-mono font-semibold text-slate-600">
-              {isLive ? 'LIVE HEDERA TESTNET' : 'DEMO MODE'}
+              {isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK'}
             </span>
           </div>
 

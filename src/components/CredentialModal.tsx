@@ -256,7 +256,7 @@ export const CredentialModal: React.FC<CredentialModalProps> = ({
                   <div className="text-slate-500 flex justify-between">
                     <span>Network:</span>
                     <span className={isLive ? "text-emerald-700 font-bold" : "text-amber-700 font-bold"}>
-                      {isLive ? 'TESTNET (LIVE)' : 'DEMO MODE'}
+                      {isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK'}
                     </span>
                   </div>
                 </div>

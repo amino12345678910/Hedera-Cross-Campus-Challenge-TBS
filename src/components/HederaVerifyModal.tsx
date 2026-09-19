@@ -125,11 +125,11 @@ export const HederaVerifyModal: React.FC<HederaVerifyModalProps> = ({
                 {isLive ? (
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center space-x-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
-                    <span>LIVE TESTNET</span>
+                    <span>LIVE • HEDERA TESTNET</span>
                   </span>
                 ) : (
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-50 text-amber-800 border border-amber-200">
-                    DEMO MODE
+                    SIMULATED • DEMO FALLBACK
                   </span>
                 )}
               </div>
@@ -169,10 +169,10 @@ export const HederaVerifyModal: React.FC<HederaVerifyModalProps> = ({
               <Radio className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-amber-900">
-                  DEMO MODE — Hedera Testnet credentials not configured
+                  SIMULATED • DEMO FALLBACK — Live Hedera credentials not active
                 </span>
                 <p className="text-amber-800/90 mt-0.5">
-                  To switch to live Hedera Testnet anchoring, set <code className="text-slate-900 font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 font-semibold">HEDERA_OPERATOR_ID</code> and <code className="text-slate-900 font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 font-semibold">HEDERA_OPERATOR_KEY</code> in your <code className="text-slate-900 font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 font-semibold">.env</code> file.
+                  To switch to live Hedera Testnet anchoring, set <code className="text-slate-900 font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 font-semibold">HEDERA_LENDER_ID</code> and <code className="text-slate-900 font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 font-semibold">HEDERA_LENDER_KEY</code> in your <code className="text-slate-900 font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 font-semibold">.env</code> file.
                 </p>
               </div>
             </div>

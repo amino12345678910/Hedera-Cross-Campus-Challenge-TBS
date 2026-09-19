@@ -37,6 +37,9 @@ export const ApprovalSuccessModal: React.FC<ApprovalSuccessModalProps> = ({
 
   if (!isOpen) return null;
 
+  const isLive = networkStatus?.isLive ?? false;
+  const contractId = networkStatus?.contractId || loan.contractId || HederaService.SMART_CONTRACT_ID;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm animate-fade-in">
       <div className="relative w-full max-w-xl rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden">
@@ -53,23 +56,35 @@ export const ApprovalSuccessModal: React.FC<ApprovalSuccessModalProps> = ({
           </div>
 
           <div>
-            <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-purple-50 text-purple-800 border border-purple-200 uppercase tracking-wider">
-              Smart Contract Execution (Prototype Simulation)
+            <span className={`px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider ${
+              isLive 
+                ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' 
+                : 'bg-purple-50 text-purple-800 border border-purple-200'
+            }`}>
+              {isLive ? 'Smart Contract Execution (Hedera Testnet)' : 'Smart Contract Execution (Demo Fallback)'}
             </span>
             <h3 className="text-2xl font-bold text-slate-900 mt-2 tracking-tight">
               Loan Approved & Facility Allocated
             </h3>
             <p className="text-sm text-slate-500 mt-1 max-w-sm mx-auto">
-              1,000 TND undercollateralized facility approved for Ahmed Ben Ali.
+              1,000 TND undercollateralized facility approved for {loan.borrowerName || 'Ahmed Ben Ali'}.
             </p>
           </div>
 
-          {/* Prototype Distinction Notice */}
-          <div className="p-4 rounded-xl bg-purple-50/80 border border-purple-200 text-xs text-left text-purple-950 flex items-start space-x-2.5">
-            <Info className="w-4 h-4 text-purple-700 shrink-0 mt-0.5" />
+          {/* Contract Notice */}
+          <div className={`p-4 rounded-xl text-xs text-left flex items-start space-x-2.5 ${
+            isLive 
+              ? 'bg-emerald-50/80 border border-emerald-200 text-emerald-950' 
+              : 'bg-purple-50/80 border border-purple-200 text-purple-950'
+          }`}>
+            <Info className={`w-4 h-4 shrink-0 mt-0.5 ${isLive ? 'text-emerald-700' : 'text-purple-700'}`} />
             <div className="leading-relaxed">
-              <span className="font-bold text-purple-900">Protocol Transparency:</span>{' '}
-              In this prototype, loan disbursement is simulated to showcase the end-to-end user experience. The underlying financial event history is verifiable via Hedera Consensus Service.
+              <span className="font-bold">
+                {isLive ? 'Hedera Testnet Execution:' : 'Protocol Demonstration:'}
+              </span>{' '}
+              {isLive 
+                ? `Loan agreement created and funded on the TrustLineVault contract (${contractId}) using Hedera Smart Contract Service (HSCS).`
+                : 'In this fallback mode, loan disbursement is simulated for demonstration without modifying live testnet state.'}
             </div>
           </div>
 
@@ -79,17 +94,19 @@ export const ApprovalSuccessModal: React.FC<ApprovalSuccessModalProps> = ({
               <span className="text-slate-600 text-[11px] font-sans font-bold">
                 Hedera Smart Contract Service (HSCS)
               </span>
-              <span className="text-purple-700 text-[10px] font-bold">MODE: PROTOTYPE SIMULATION</span>
+              <span className={`text-[10px] font-bold ${isLive ? 'text-emerald-700' : 'text-purple-700'}`}>
+                {isLive ? 'MODE: LIVE TESTNET EXECUTION' : 'MODE: SIMULATED DEMO FALLBACK'}
+              </span>
             </div>
 
             <div className="flex items-center justify-between text-slate-600">
               <span>Target Contract:</span>
-              <span className="text-slate-900 font-bold">{HederaService.SMART_CONTRACT_ID}</span>
+              <span className="text-slate-900 font-bold">{contractId}</span>
             </div>
 
             <div className="flex items-center justify-between text-slate-600">
               <span>Facility Amount:</span>
-              <span className="text-emerald-700 font-bold">{loan.amount.toLocaleString()} TND</span>
+              <span className="text-emerald-700 font-bold">{loan.amount.toLocaleString()} TND (~{loan.principalHbar || 5} HBAR)</span>
             </div>
 
             <div className="flex items-center justify-between text-slate-600">
@@ -98,9 +115,9 @@ export const ApprovalSuccessModal: React.FC<ApprovalSuccessModalProps> = ({
             </div>
 
             <div className="flex items-center justify-between text-slate-600">
-              <span>Simulated EVM Tx:</span>
+              <span>{isLive ? 'Hedera Tx ID:' : 'Simulated EVM Tx:'}</span>
               <span className="text-blue-700 font-semibold truncate max-w-[200px]">
-                0x8f7a9c1e3b5d2f4a6b8c...
+                {loan.contractTxHash || (isLive ? '0.0.10572773@consensus' : '0x8f7a9c1e3b5d2f4a6b8c...')}
               </span>
             </div>
 

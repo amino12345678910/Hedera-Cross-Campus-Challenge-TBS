@@ -54,9 +54,14 @@ export class HederaService {
     try {
       const resp = await fetch('/api/hedera/status');
       if (resp.ok) {
-        const data = await resp.json();
-        this.cachedStatus = data;
-        return data;
+        const data: HederaNetworkStatus = await resp.json();
+        const enhanced: HederaNetworkStatus = {
+          ...data,
+          statusLabel: data.isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK',
+          mode: data.isLive ? 'LIVE' : 'SIMULATED'
+        };
+        this.cachedStatus = enhanced;
+        return enhanced;
       }
     } catch (e) {
       // Backend not reached or running in static mode
@@ -64,9 +69,12 @@ export class HederaService {
 
     const fallback: HederaNetworkStatus = {
       isLive: false,
+      mode: 'SIMULATED',
+      statusLabel: 'SIMULATED • DEMO FALLBACK',
       topicId: this.DEFAULT_TOPIC_ID,
+      contractId: this.SMART_CONTRACT_ID,
       network: 'testnet',
-      reason: 'DEMO MODE — Hedera Testnet credentials not configured'
+      reason: 'SIMULATED • DEMO FALLBACK — Hedera Testnet credentials not configured'
     };
     this.cachedStatus = fallback;
     return fallback;

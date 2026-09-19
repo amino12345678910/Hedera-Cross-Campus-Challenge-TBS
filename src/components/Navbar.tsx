@@ -125,20 +125,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Granular Subsystem Status */}
             <button
               onClick={onOpenVerifyModal}
-              title={`Network: ${isLive ? 'LIVE' : 'DEMO'} | HCS: ${isLive ? 'LIVE' : 'DEMO'} | Vault: ${hasContract ? 'LIVE' : 'DEMO'} | Account: ${isTwoParty ? 'TWO-PARTY' : 'SINGLE'}`}
-              className={`flex items-center space-x-2 px-3 py-1.5 rounded-xl text-xs transition-all border shadow-xs ${
+              title={`Network: ${isLive ? 'LIVE' : 'SIMULATED'} | HCS: ${isLive ? 'LIVE' : 'DEMO'} | Vault: ${hasContract ? 'LIVE' : 'DEMO'} | Account: ${isTwoParty ? 'TWO-PARTY' : 'SINGLE'}`}
+              className={`flex items-center space-x-2.5 px-3.5 py-1.5 rounded-xl text-xs transition-all border shadow-xs ${
                 isLive
                   ? 'bg-emerald-50 hover:bg-emerald-100/80 text-emerald-800 border-emerald-200'
                   : 'bg-amber-50 hover:bg-amber-100/80 text-amber-800 border-amber-200'
               }`}
             >
-              <span className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
+              <span className={`w-2 h-2 rounded-full ${isLive ? 'bg-emerald-600 animate-pulse' : 'bg-amber-500'}`} />
               <div className="flex flex-col text-left leading-tight">
-                <span className="text-[9px] uppercase tracking-wider font-bold text-slate-500">
-                  {isLive ? (isTwoParty ? 'TESTNET • TWO-PARTY' : 'TESTNET • SINGLE') : 'DEMO MODE'}
+                <span className="font-bold text-[11px] tracking-tight">
+                  {isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK'}
                 </span>
-                <span className="font-semibold font-mono text-[10px]">
-                  {isLive ? (hasContract ? 'LIVE HCS + VAULT' : 'LIVE HCS') : 'SIMULATED'}
+                <span className="text-[10px] text-slate-500 font-mono">
+                  {isLive 
+                    ? (isTwoParty ? `TWO-PARTY (${networkStatus?.lenderIdMasked || 'Lender'} ➔ ${networkStatus?.borrowerIdMasked || 'Borrower'})` : (hasContract ? 'HCS + VAULT ACTIVE' : 'HCS ACTIVE'))
+                    : 'Demo credentials fallback'}
                 </span>
               </div>
               <ExternalLink className="w-3 h-3 text-slate-400 ml-0.5 hidden sm:block" />

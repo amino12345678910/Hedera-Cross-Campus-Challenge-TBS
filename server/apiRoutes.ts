@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from 'http';
-import { getServerStatus } from './hederaClient';
+import { getServerStatus, performHederaHealthCheck } from './hederaClient';
 import { ServerHcsService } from './hcsService';
 import { ServerContractService } from './contractService';
 
@@ -58,7 +58,7 @@ export async function handleHederaApiRequest(
   try {
     // 1. GET /api/hedera/status
     if (url === '/api/hedera/status' && req.method === 'GET') {
-      const status = getServerStatus();
+      const status = await performHederaHealthCheck();
       return sendJson(res, 200, status);
     }
 

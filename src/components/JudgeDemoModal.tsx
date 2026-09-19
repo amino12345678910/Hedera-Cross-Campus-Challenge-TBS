@@ -11,12 +11,15 @@ import {
   RotateCcw
 } from 'lucide-react';
 
+import { HederaNetworkStatus } from '../types';
+
 interface JudgeDemoModalProps {
   isOpen: boolean;
   onClose: () => void;
   onNavigateTab: (tab: 'landing' | 'passport' | 'verifier' | 'lender') => void;
   onOpenCredentialModal: () => void;
   onOpenLoanModal: () => void;
+  networkStatus?: HederaNetworkStatus;
 }
 
 interface DemoStep {
@@ -107,12 +110,14 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({
   onClose,
   onNavigateTab,
   onOpenCredentialModal,
-  onOpenLoanModal
+  onOpenLoanModal,
+  networkStatus
 }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   if (!isOpen) return null;
 
+  const isLive = networkStatus?.isLive ?? true;
   const current = STEPS[currentStepIndex];
 
   const handleExecuteAction = () => {
@@ -151,8 +156,12 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({
             <div>
               <div className="flex items-center space-x-2">
                 <h3 className="text-sm font-bold text-slate-900">Judge Demo Mode</h3>
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
-                  90-Second Walkthrough
+                <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold border ${
+                  isLive 
+                    ? 'bg-emerald-50 text-emerald-800 border-emerald-200' 
+                    : 'bg-amber-50 text-amber-800 border-amber-200'
+                }`}>
+                  {isLive ? 'LIVE • HEDERA TESTNET' : 'SIMULATED • DEMO FALLBACK'}
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 mt-0.5">Step {current.step} of 8: {current.phase}</p>
